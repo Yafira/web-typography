@@ -36,8 +36,16 @@ header {
     font-size: 48px;
     font-weight: 700;
     line-height: 1;
+
+
+    transition: font-size 2s, color 2s;
 }
 
+
+header:hover {
+    font-size: 64px;
+    color: #ff00fb;
+}
 
 footer {
     position: fixed;
