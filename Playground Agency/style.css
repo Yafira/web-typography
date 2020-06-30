@@ -1,7 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Code:400,500,600,700&display=swap');
+@font-face {
+    font-family: Inter;
+    src: url(fonts/inter-regular.woff2), url(fonts/inter-regular.woff);
+}
+
+@font-face {
+    font-family: Inter;
+    font-weight: 700;
+    src: url(fonts/inter-bold.woff2), url(fonts/inter-bold.woff)
+}
+
 
 body {
-    font-family: Fira Code;
+    font-family: Inter;
     font-size: 24px;
     line-height: 1.5;
 
