@@ -1,11 +1,11 @@
 body {
-    font-family: Arial;
+    font-family: Georgia;
     font-size: 24px;
     line-height: 1.5;
 
 
     background-color: #ffffff;
-    background-image: url(img/background.jpg);
+    background-image: url(img/bg-oleglaptev.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -19,8 +19,14 @@ body {
 header {
     position: fixed;
     top: 64px;
-    left: 44px;
+    left: 64px;
+
+    font-size: 48px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1;
 }
+
 
 footer {
     position: fixed;
