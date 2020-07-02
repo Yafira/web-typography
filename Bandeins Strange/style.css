@@ -1,0 +1,44 @@
+body {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.5;
+    
+    background-color: #000000;
+    color: #ffffff;
+    margin: 50vh 40px 40px 40px;
+}
+
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+
+    position: fixed;
+    top: 80px;
+    left: 80px;
+    z-index: 1;
+}
+
+
+nav {
+    position: fixed;
+    top: 80px;
+    right: 80px;
+    z-index: 1;
+}
+
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 0 0 30px;
+}
+
+
+img {
+    width: 100%;
+    height: calc(100vh - 80px);
+    object-fit: cover;
+    position: sticky;
+    top: 40px;
+}
