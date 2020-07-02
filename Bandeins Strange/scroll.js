@@ -8,10 +8,11 @@ window.addEventListener("scroll", function () {
     const pixels = window.pageYOffset
 
 
-    const fontSize = pixels * 0.2 + 12
+    const fontWeight = pixels * 0.4 + 100
+    const fontWidth = pixels * 0.1 + 100
 
 
     // font-size -> fontSize
     // font-variation-settings -> fontVariationSettings
-    h1.style.fontSize = fontSize + "px"
+    h1.style.fontVariationSettings = `"wght" ${fontWeight}, "wdth" ${fontWidth}`
 })
