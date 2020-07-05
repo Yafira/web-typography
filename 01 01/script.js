@@ -22,6 +22,8 @@ function setup() {
 function draw() {
     background("#fbfcc0")
 
-    copy(graphic, 0, 0, 500, 500, 0, 0, frameCount, 500)
-    copy(graphic, 0, 0, 500, 500, frameCount, 0, 500 - frameCount, 500)
+    let val = sin(frameCount * 0.05) * 250
+
+    copy(graphic, 0, 0, 500, 500, 0, 0, 250 + val, 500)
+    copy(graphic, 0, 0, 500, 500, 250 + val, 0, 250 - val, 500)
 } 
