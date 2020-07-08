@@ -19,16 +19,13 @@ function setup() {
 }
 
 function draw() {
-    const tileSize = 200
+    const tileSize = 50
 
-    for (let x = 0; x < 3; x = x + 1) {
-
-
-        for (let y = 0; y < 3; y = y + 1) {
-            copy(graphic, 0, 0, 600, 600, x * tileSize, y * tileSize, tileSize, tileSize)
-        }
-
-
-        
+    for (let x = 0; x < 12; x = x + 1) {
+        for (let y = 0; y < 12; y = y + 1) {
+            image(graphic, x * tileSize, y * tileSize, tileSize, tileSize, 0, 0, 600, 600)
+            // copy = (source, destination)
+            // image = (destination, source)
+        }     
     }
 }
