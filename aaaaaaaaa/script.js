@@ -28,7 +28,7 @@ function draw() {
     for (let x = 0; x < 12; x = x + 1) {
         for (let y = 0; y < 12; y = y + 1) {
 
-            const distortion = sin(frameCount * 0.05) * 50
+            const distortion = sin(frameCount * 0.05 + x * 0.5 + y * 0.3) * 50
 
             // source 
             const sx = x * tileSize + distortion
