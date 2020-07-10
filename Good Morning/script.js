@@ -23,15 +23,20 @@ function draw() {
     background("#ebe2d8")
 
     
-    const tileSize = 100
+    const tileSize = 10
 
 
-    for (let x = 0; x < 12; x = x + 1) {
-        for (let y = 0; y < 6; y = y + 1) {
+    for (let x = 0; x < 120; x = x + 1) {
+        for (let y = 0; y < 60; y = y + 1) {
+
+            const wave = 0.05
+
+            const distortionX = sin(frameCount * wave + x * 0.5 + y * 0.1) * 10
+            const distortionY = sin(frameCount * wave + x * 0.5 + y * 1) * 5
 
             // source 
-            const sx = x * tileSize
-            const sy = y * tileSize
+            const sx = x * tileSize + distortionX
+            const sy = y * tileSize + distortionY
             const sw = tileSize
             const sh = tileSize
 
