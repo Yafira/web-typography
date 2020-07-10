@@ -5,6 +5,8 @@ let graphic
 const waveInput = document.querySelector("input.wave")
 const line1Input = document.querySelector("input.line1")
 const line2Input = document.querySelector("input.line2")
+const dxInput = document.querySelector("input.dx")
+const dyInput = document.querySelector("input.dy")
 
 function preload () {
     font = loadFont("assets/spacegrotesk-medium.otf")
@@ -29,8 +31,8 @@ function draw() {
 
             const wave = waveInput.value
 
-            const distortionX = sin(frameCount * wave + x * 0.5 + y * 0.1) * 10
-            const distortionY = sin(frameCount * wave + x * 0.5 + y * 1) * 5
+            const distortionX = sin(frameCount * wave + x * 0.5 + y * 0.1) * dxInput.value
+            const distortionY = sin(frameCount * wave + x * 0.5 + y * 1) * dyInput.value
 
             // source 
             const sx = x * tileSize + distortionX
