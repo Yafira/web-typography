@@ -1,6 +1,10 @@
 let font
 let graphic
 
+
+const waveInput = document.querySelector("input.wave")
+
+
 function preload () {
     font = loadFont("assets/spacegrotesk-medium.otf")
 }
@@ -29,7 +33,7 @@ function draw() {
     for (let x = 0; x < 120; x = x + 1) {
         for (let y = 0; y < 60; y = y + 1) {
 
-            const wave = 0.05
+            const wave = waveInput.value
 
             const distortionX = sin(frameCount * wave + x * 0.5 + y * 0.1) * 10
             const distortionY = sin(frameCount * wave + x * 0.5 + y * 1) * 5
