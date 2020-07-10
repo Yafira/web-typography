@@ -21,6 +21,31 @@ function setup() {
 
 function draw() {
     background("#ebe2d8")
-    image(graphic, frameCount, 0, 1200, 600, 0, 0, 1200, 600)
 
-}
+    
+    const tileSize = 100
+
+
+    for (let x = 0; x < 12; x = x + 1) {
+        for (let y = 0; y < 6; y = y + 1) {
+
+            // source 
+            const sx = x * tileSize
+            const sy = y * tileSize
+            const sw = tileSize
+            const sh = tileSize
+
+            // destination
+            const dx = x * tileSize
+            const dy = y * tileSize
+            const dw = tileSize
+            const dh = tileSize
+
+            image(graphic, dx, dy, dw, dh, sx, sy, sw, sh)
+
+        }
+    }
+
+
+
+    }
