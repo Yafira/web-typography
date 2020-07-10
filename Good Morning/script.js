@@ -3,7 +3,8 @@ let graphic
 
 
 const waveInput = document.querySelector("input.wave")
-
+const line1Input = document.querySelector("input.line1")
+const line2Input = document.querySelector("input.line2")
 
 function preload () {
     font = loadFont("assets/spacegrotesk-medium.otf")
@@ -13,14 +14,7 @@ function preload () {
 function setup() {
     createCanvas(1200, 600)
 
-    graphic = createGraphics(1200, 600)
-
-    graphic.fill("#ff0000")
-    graphic.textSize(300)
-    graphic.textAlign(CENTER, CENTER)
-    graphic.textFont(font)
-    graphic.textLeading(200)
-    graphic.text("Good\nMorning", 600, 300)
+    createCopy()
 }
 
 function draw() {
@@ -53,8 +47,27 @@ function draw() {
             image(graphic, dx, dy, dw, dh, sx, sy, sw, sh)
 
         }
-    }
+    }   
+}
+
+function createCopy() { 
+    graphic = createGraphics(1200, 600)
+
+    const text = line1Input.value + "\n" + line2Input.value
+
+    graphic.fill("#ff0000")
+    graphic.textSize(300)
+    graphic.textAlign(CENTER, CENTER)
+    graphic.textFont(font)
+    graphic.textLeading(200)
+    graphic.text(text, 600, 300)
+}
 
 
+line1Input.addEventListener("input", function () {
+    createCopy()
+})
 
-    }
+line2Input.addEventListener("input", function () { 
+    createCopy()
+})
