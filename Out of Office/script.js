@@ -25,13 +25,15 @@ function draw() {
     
     const tileSize = 50
 
-    for (let y = 0; y < 0; y = y + 1) {
+    for (let y = 0; y < 12; y = y + 1) {
+
+        const position = 0.5
 
         // source
         const sx = 0
-        const sy = 0
+        const sy = y * tileSize * position
         const sw = 1200
-        const sh = 600
+        const sh = tileSize * position + (600 - tileSize) * (1 - position)
 
         // destination 
         const dx = 0
@@ -40,12 +42,7 @@ function draw() {
         const dh = tileSize
 
 
-
         image(graphic, dx, dy, dw, dh, sx, sy, sw, sh)
     }
-
-
-
-
 }
 
