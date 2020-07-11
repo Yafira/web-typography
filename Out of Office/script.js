@@ -27,7 +27,20 @@ function draw() {
 
     for (let y = 0; y < 12; y = y + 1) {
 
-        let position = winMouseX / windowWidth
+        // let position = winMouseX / windowWidth
+        let position = frameCount
+
+        // loop over 60 frames
+        position = position % 120
+
+        // if on the back-half we want to reverse
+        if (position > 60) {
+            position = 120 - position
+        }
+
+        // make sure it's between 0 and 1
+        position = position / 60
+
         position = easeInOutCubic(position)
 
 
