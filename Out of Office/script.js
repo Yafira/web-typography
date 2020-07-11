@@ -27,7 +27,9 @@ function draw() {
 
     for (let y = 0; y < 12; y = y + 1) {
 
-        const position = winMouseX / windowWidth
+        let position = winMouseX / windowWidth
+        position = easeInOutCubic(position)
+
 
         // source
         const sx = 0
