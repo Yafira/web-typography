@@ -27,7 +27,7 @@ function draw() {
 
     for (let y = 0; y < 12; y = y + 1) {
 
-        const position = 0.5
+        const position = winMouseX / windowWidth
 
         // source
         const sx = 0
