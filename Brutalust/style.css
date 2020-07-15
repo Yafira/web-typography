@@ -10,9 +10,22 @@ body {
 section {
     padding: 64px;
     height: 100vh;
+    background-size: 60vmax auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section.image1 {
+    background-image: url(assets/image1.jpg);
 }
 
 section.image2 {
     background-color: #ffffff;
     color:#000000;
+    background-image: url(assets/image2.jpg);
+}
+
+section.image3 {
+    background-image: url(assets/image3.jpg);
 }
