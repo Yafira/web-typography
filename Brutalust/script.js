@@ -8,7 +8,13 @@ const runRandom = tag => {
     const addInterval = setInterval(() => {
         num = num + 1
         tag.innerHTML = originalContent.substring(0, num)
+
+        if (originalContent == tag.innerHTML) {
+            clearInterval(addInterval)
+        }
+
     }, 100)
+
 
 }
 
