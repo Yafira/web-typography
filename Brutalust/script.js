@@ -28,6 +28,19 @@ const runRandom = tag => {
 
 }
 
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0.5) {
+            runRandom(entry.target)
+        }
+    })
+}, {
+    threshold: [0, 0.5, 1]
+})
+
+
+
+// run on page load
 headerTags.forEach(tag => {
-    runRandom(tag)
+    observer.observe(tag)
 })
