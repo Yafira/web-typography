@@ -18,6 +18,9 @@ function setup() {
 
 
 function draw() {
+    const nl = 0.01
+    // nl = noise level
+
     background("#eef3d7")
 
     fill("#b617ff")
@@ -34,15 +37,20 @@ function draw() {
 
 
     noFill()
-    stroke("#000000")
+    stroke("#b617ff")
+
 
     beginShape()
     points.forEach(point => {
         const distance = createVector(point.x - mouseX, point.y - mouseY)
         const distortion = distance.mult(60 / distance.mag())
 
+        const nx = 40 * noise(nl * point.x, nl * point.y, nl * frameCount) - 20
+        const ny = 40 * noise(nl * point.x, nl * point.y, nl * frameCount) - 20
+        // nl -> adds the speed to noise
 
-        vertex(point.x + distortion.x, point.y + distortion.y)
+
+        vertex(point.x + distortion.x + nx, point.y + distortion.y + ny)
     })
     endShape()
 
