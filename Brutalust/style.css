@@ -4,6 +4,13 @@
     src: url(assets/iawritermonov-italic.ttf);
 }
 
+html, body {
+    scroll-snap-type: y mandatory;
+    height: 100%;
+    overflow-y: scroll; 
+    /* overflow-y -> scrolls in y direction */
+}
+
 body {
     font-family: iA Writer Mono;
     font-style: italic;
@@ -21,6 +28,8 @@ section {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    scroll-snap-align: start;
 }
 
 section.image1 {
