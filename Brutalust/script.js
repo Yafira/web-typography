@@ -1,7 +1,7 @@
 const headerTags = document.querySelectorAll("h1, h2")
 
 const runRandom = tag => {
-    const originalContent = tag.innerHTML
+    const originalContent = tag.dataset.original
     let newContent = ""
     let num = 0
     const randomList = "abcdefghijklmnopqrstuvwxyz._$£@!".split("")
@@ -40,7 +40,8 @@ const observer = new IntersectionObserver(entries => {
 
 
 
-// run on page load
+// runs on page load
 headerTags.forEach(tag => {
+    tag.dataset.original = tag.innerHTML
     observer.observe(tag)
 })
